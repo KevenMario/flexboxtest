@@ -7,9 +7,15 @@ export default class App extends React.Component
   {
     return (
       <View style={styles.container}>
-          <View style={styles.b1}/>
-          <View style={styles.b1}/>
-          <View style={styles.b1}/>
+      <View style ={styles.box}/>
+      
+      <View style ={styles.box2}/>
+
+      <View style ={styles.box3}>
+        <View style ={styles.subbox}/>
+        <View style ={styles.subbox}/>
+        <View style ={styles.subbox}/>
+      </View>
       </View>
     );
   }
@@ -20,21 +26,32 @@ const styles = StyleSheet.create(
   container: 
   {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#F5FCFF',
+    alignItems: 'stretch',
+    justifyContent: 'space-evenly',
   },
-  b1:
-  {
-    flex : 1,
-    backgroundColor : 'steelblue'
+  box:{
+    flex :2,
+    backgroundColor : 'steelblue',
+    margin : 4
   },
-  b2:
-  {
-    backgroundColor : 'gray'
+  box2:{
+    flex :7,
+    backgroundColor : 'steelblue',
+    margin : 4
+  }, 
+  box3:{
+    flex :1,
+    backgroundColor : 'steelblue',
+    margin : 4,
+    flexDirection:'row'
   },
-  b3:
+  subbox :
   {
-    backgroundColor : 'yellow'
+    flex :1,
+   
+    backgroundColor : 'yellow',
+    margin:2
   }
+
 });
